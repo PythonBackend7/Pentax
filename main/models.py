@@ -48,12 +48,22 @@ class Project(TimeStamp):
 
 
 class Artickle(TimeStamp):
-    pass
+    title = models.CharField(max_length=212)
+    image = models.ImageField(upload_to='art')
+    def __str__(self):
+        return self.title
+
 
 
 class Price(TimeStamp):
-    pass
+    name = models.CharField(max_length=212)
+    def __str__(self):
+        return self.name
+
 
 
 class Contact(TimeStamp):
-    pass
+    name = models.CharField(max_length=212)
+    def __str__(self):
+        return self.name
+
